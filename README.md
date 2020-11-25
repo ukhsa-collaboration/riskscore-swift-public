@@ -2,7 +2,7 @@
 
 ## API
 
-The public API is [`RiskScoreCalculator`](Sources/RiskScore/RiskScoreCalculator.swift), [`RiskScoreCalculatorConfiguration`](Sources/RiskScore/RiskScoreCalculatorConfiguration.swift) and [`ScanInstance`](Sources/RiskScore/ScanInstance.swift). There is an example configuration `RiskScoreCalculatorConfiguration.exampleConfiguration` taken from the Python [GAEN repo](https://github.com/nhsx) .
+The public API is [`RiskScoreCalculator`](Sources/RiskScore/RiskScoreCalculator.swift), [`RiskScoreCalculatorConfiguration`](Sources/RiskScore/RiskScoreCalculatorConfiguration.swift) and [`ScanInstance`](Sources/RiskScore/ScanInstance.swift). There is an example configuration `RiskScoreCalculatorConfiguration.exampleConfiguration`.
 
 ## Usage
 

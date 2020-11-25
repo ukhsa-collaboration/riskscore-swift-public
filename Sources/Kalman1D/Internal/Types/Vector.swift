@@ -45,24 +45,6 @@ extension Vector where T == ObservationSigmaPoints {
     }
 }
 
-extension Vector where T == SmootherStateSigmaPoints {
-    init(scale: Value<Scale>, stateMean: Value<StateMean>, stateCovariance: Value<StateCovariance>) {
-        let factor = sqrt(scale.rawValue * stateCovariance.rawValue)
-        var base = Array(repeating: stateMean.rawValue, count: Weights.numberOfSmootherSigmaPoints)
-        base[1] += factor
-        self.array = base
-    }
-}
-
-extension Vector where T == SmootherTransitionSigmaPoints {
-    init(scale: Value<Scale>, transitionCovariance: Value<TransitionCovariance>) {
-        let factor = sqrt(scale.rawValue * transitionCovariance.rawValue)
-        var base = Array(repeating: Double.zero, count: Weights.numberOfSmootherSigmaPoints)
-        base[2] += factor
-        self.array = base
-    }
-}
-
 // MARK: Utilities
 extension Vector {
     func minus<V: ValueTag>(_ value: Value<V>) -> Vector<T> {
